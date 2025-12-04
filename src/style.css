@@ -1,0 +1,30 @@
+:root {
+  --bg-primary: #343d4b;
+  --bg-secondary: #222831;
+  --bg-card-1: #272e37;
+  --bg-color-2: #3a434f;
+  --button-background: linear-gradient(
+    90.8deg,
+    rgba(144, 217, 224, 0.9) 0.2%,
+    rgba(84, 96, 230, 0.9) 100%
+  );
+  --button-invert-background: linear-gradient(
+    256.33deg,
+    rgba(144, 217, 224, 0.9) 9.04%,
+    rgba(84, 96, 230, 0.9) 92.2%
+  );
+  --color-01: #fff;
+  --color-02: #000;
+}
+
+body {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  background-color: var(--bg-primary);
+  color: var(--color-01);
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
