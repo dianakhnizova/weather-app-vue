@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import MainPage from './pages/main-page/MainPage.vue';
+import StatisticLabel from './StatisticLabel.vue';
+
+
 
 </script>
 
 <template>
-  <MainPage />
+    <StatisticLabel />
 </template>
 
 <style scoped></style>

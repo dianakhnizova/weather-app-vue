@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import MainPage from './pages/main-page/MainPage.vue';
+import ListDay from '../../../components/ListDay.vue';
+
 
 </script>
 
 <template>
-  <MainPage />
+    <ListDay />
 </template>
 
 <style scoped></style>
