@@ -1,10 +1,14 @@
 <script setup lang="ts">
+interface Props {
+    onClick?: () => void
+}
 
+defineProps<Props>()
 
 </script>
 
 <template>
-    <button class="button">
+    <button class="button" @click="onClick">
         <div>
             <slot name="icon" />
         </div>
