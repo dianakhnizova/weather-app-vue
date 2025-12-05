@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue';
 import type { PostForm } from '../../../../sources/interfaces';
-import DeleteIcon from '../../../../assets/delete.svg'
-import EditIcon from '../../../../assets/edit.svg'
+
 import { messages } from '../../../../sources/messages';
 import Button from '../../../../components/Button.vue';
+import PostItem from '../../../../components/PostItem.vue';
 
 const posts = ref<PostForm[]>([])
 const post = reactive<PostForm>({
@@ -83,18 +83,7 @@ const updatePost = () => {
     </div>
 
     <div v-show='isPost' class="listContainer">
-        <div v-for="post in posts" class="card">
-            <p>{{ post.title }}</p>
-            <p>{{ post.content }}</p>
-            <Button @click="deletePost(post)" class="icon">
-                <template #icon>
-                    <DeleteIcon class="icon" />
-                </template></Button>
-            <Button @click="editPost(post)" class="icon">
-                <template #icon>
-                    <EditIcon class="icon" />
-                </template></Button>
-        </div>
+        <PostItem v-for="post in posts" :post="post" @deletepost="deletePost" @editpost="editPost"/>
     </div>
 
 </template>
@@ -125,18 +114,6 @@ const updatePost = () => {
     padding: 10px 20px;
     background: var(--bg-card-1);
 
-}
-
-.icon {
-    width: 20px;
-    height: 20px;
-    background: none;
-    border: none;
-
-    &:hover {
-        background: none;
-        transform: scale(1.02);
-    }
 }
 
 .modal {
