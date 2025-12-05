@@ -1,14 +1,15 @@
 <script setup lang="ts">
 interface Props {
-    onClick?: () => void
+    onClick?: () => void;
+    className?: string;
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 
 </script>
 
 <template>
-    <button class="button" @click="onClick">
+    <button :class="props.className ? className : 'button'" @click="props.onClick">
         <div>
             <slot name="icon" />
         </div>

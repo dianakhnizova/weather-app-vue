@@ -5,6 +5,7 @@ export interface WeatherResponse {
 }
 
 export interface PostForm {
+  index: number;
   title: string;
   content: string
 }

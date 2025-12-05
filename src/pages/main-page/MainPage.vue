@@ -1,19 +1,12 @@
 <script setup lang="ts">
-import AddText from './components/AddText.vue';
-import Navigator from './components/Navigator.vue';
-import Statistics from './components/Statistics.vue';
-import WeatherIndicator from './components/WeatherIndicator.vue';
-
+import FormComponent from './components/form-component/FormComponent.vue';
 
 
 </script>
 
 <template>
     <section class="container">
-        <Statistics />
-        <WeatherIndicator />
-        <AddText />
-        <Navigator />
+        <FormComponent />
     </section>
 </template>
 
